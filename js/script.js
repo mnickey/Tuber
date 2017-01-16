@@ -30,7 +30,7 @@ $(function(){
     });
 });
 
-
+// Execute search
 function search(){
     // Clear Results
     $('#results').html('');
@@ -112,7 +112,6 @@ function nextPage(){
     );
 }
 
-
 // Prev Page Function
 function prevPage(){
     var token = $('#prev-button').data('token');
@@ -172,8 +171,7 @@ function getOutput(item){
         '</div>' +
         '<div class="list-right">' +
         '<h3>' +
-        // '<a class="videos fancybox" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a>'+
-        '<a class="fancybox.iframe fancybox-media" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a>'+
+        '<a class="video-title" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a>'+
         '</h3>' +
         '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
         '<p>'+description+'</p>' +
@@ -202,16 +200,10 @@ function getButtons(prevPageToken, nextPageToken){
 }
 
 $(document).ready(function () {
-    $(".videos").fancybox({
-        type: "iframe",
-        maxWidth: 800,
-        maxHeight: 600,
-        fitToView: false,
-        width: '70%',
-        height: '70%',
-        autoSize: false,
-        closeClick: false,
-        openEffect: 'none',
-        closeEffect: 'none'
+    $('.video-title').click(function (event) {
+        event.preventDefault();
+        // unhide modal here when you see the console.log populate
+        console.log('you clicked the title');
+        alert('you clicked the title');
     });
 });
