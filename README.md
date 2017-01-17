@@ -1,5 +1,6 @@
 ##App Requirements
-* Accept a user search term Get JSON from the YouTube API based on the user search term    
+* Accept a user search term  
+* Get JSON from the YouTube API based on the user search term    
 * Display the thumbnail image of the returned videos  
 
 ###Advanced functionality 
