@@ -65,6 +65,14 @@ function search(){
 
             // Display Buttons
             $('#buttons').append(buttons);
+
+            // Display video in a modal
+            $('.video-title').click(function (event) {
+                event.preventDefault();
+                // unhide modal here when you see the console.log populate
+                console.log('you clicked the title');
+                $('#modal').removeClass('hidden');
+            });
         }
     );
 }
@@ -195,15 +203,9 @@ function getButtons(prevPageToken, nextPageToken){
             '<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="'+q+'"' +
             ' onclick="nextPage();">Next Page</button></div>';
     }
-
     return btnoutput;
 }
 
 $(document).ready(function () {
-    $('.video-title').click(function (event) {
-        event.preventDefault();
-        // unhide modal here when you see the console.log populate
-        console.log('you clicked the title');
-        alert('you clicked the title');
-    });
+    console.log('Ready!');
 });
