@@ -71,7 +71,8 @@ function search(){
                 event.preventDefault();
                 // unhide modal here when you see the console.log populate
                 console.log('you clicked the title');
-                $('#modal').removeClass('hidden');
+                $('#modal').toggleClass('hidden');
+
             });
         }
     );
