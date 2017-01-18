@@ -68,10 +68,10 @@ function search(){
 
             // Display video in a modal
             $('.video-title').click(function (event) {
-                event.preventDefault();
+                // event.preventDefault();
                 // unhide modal here when you see the console.log populate
                 console.log('you clicked the title');
-                $('#modal').toggleClass('hidden');
+                // $('#modal').toggleClass('hidden');
 
             });
         }
@@ -180,7 +180,7 @@ function getOutput(item){
         '</div>' +
         '<div class="list-right">' +
         '<h3>' +
-        '<a class="video-title" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a>'+
+        '<a class="video-title facnybox fancybox.iframe" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a>'+
         '</h3>' +
         '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
         '<p>'+description+'</p>' +
