@@ -59,6 +59,9 @@ function search(){
 
                 // Display Results
                 $('#results').append(output);
+
+                // Recall FancyBox
+                $(".fancybox").fancybox();
             });
 
             var buttons = getButtons(prevPageToken, nextPageToken);
@@ -66,15 +69,8 @@ function search(){
             // Display Buttons
             $('#buttons').append(buttons);
 
-            // Display video in a modal
-            // $('.video-title').click(function (event) {
-            //     // event.preventDefault();
-            //     // unhide modal here when you see the console.log populate
-            //     console.log('you clicked the title');
-            //     // $('#modal').toggleClass('hidden');
-            //
-            // });
         }
+
     );
 }
 
@@ -111,6 +107,9 @@ function nextPage(){
 
                 // Display Results
                 $('#results').append(output);
+
+                // Recall FancyBox
+                $(".fancybox").fancybox();
             });
 
             var buttons = getButtons(prevPageToken, nextPageToken);
@@ -154,6 +153,9 @@ function prevPage(){
 
                 // Display Results
                 $('#results').append(output);
+
+                // Recall FancyBox
+                $(".fancybox").fancybox();
             });
 
             var buttons = getButtons(prevPageToken, nextPageToken);
@@ -179,7 +181,7 @@ function getOutput(item){
         '<div class="list-left">' +
         '<img src="'+thumb+'">' +
         '</div>' +
-        '<div class="list-right myModal" id="modal">' +
+        '<div class="list-right myModal" >' +
         '<h3>' +
         '<a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/'+ videoId +'">'+title+'</a>' +
         '</h3>' +
