@@ -37,7 +37,7 @@ function search(){
     $('#buttons').html('');
 
     // Get Form Input
-    q = $('#query').val();
+    var q = $('#query').val();
 
     // Run GET Request on API
     $.get(
@@ -68,9 +68,7 @@ function search(){
 
             // Display Buttons
             $('#buttons').append(buttons);
-
         }
-
     );
 }
 
