@@ -67,13 +67,13 @@ function search(){
             $('#buttons').append(buttons);
 
             // Display video in a modal
-            $('.video-title').click(function (event) {
-                // event.preventDefault();
-                // unhide modal here when you see the console.log populate
-                console.log('you clicked the title');
-                // $('#modal').toggleClass('hidden');
-
-            });
+            // $('.video-title').click(function (event) {
+            //     // event.preventDefault();
+            //     // unhide modal here when you see the console.log populate
+            //     console.log('you clicked the title');
+            //     // $('#modal').toggleClass('hidden');
+            //
+            // });
         }
     );
 }
@@ -174,20 +174,20 @@ function getOutput(item){
     var videoDate = item.snippet.publishedAt;
 
     // Build Output String
-    var output = '<li>' +
+    var output =
+        '<li>' +
         '<div class="list-left">' +
         '<img src="'+thumb+'">' +
         '</div>' +
-        '<div class="list-right">' +
+        '<div class="list-right myModal" id="modal">' +
         '<h3>' +
-        '<a class="video-title facnybox fancybox.iframe" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a>'+
+        '<a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/'+ videoId +'">'+title+'</a>' +
         '</h3>' +
         '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
         '<p>'+description+'</p>' +
         '</div>' +
         '</li>' +
-        '<div class="clearfix"></div>' +
-        '';
+        '<div class="clearfix"></div>';
 
     return output;
 }
@@ -208,5 +208,6 @@ function getButtons(prevPageToken, nextPageToken){
 }
 
 $(document).ready(function () {
+    $(".fancybox").fancybox();
     console.log('Ready!');
 });
